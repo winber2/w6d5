@@ -16,13 +16,22 @@ class AutoComplete extends React.Component {
     this.setState({inputVal: text});
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    let text = e.currentTarget.textContent;
+    let input = document.getElementsByClassName('input')[0];
+    input.value = text;
+    this.names = NAMES.filter(name => name.toLowerCase().indexOf(text.toLowerCase()) === 0);
+    this.setState({ inputVal: text});
+  }
+
   render() {
     return (
       <div className="auto">
-        <input onInput={this.handleInput.bind(this)}></input>
+        <input className="input" onInput={this.handleInput.bind(this)}></input>
         <ul>
           {this.names.map((name, i) => (
-            <li key={i}>{name}</li>
+            <li key={i} onClick={this.handleClick.bind(this)}>{name}</li>
           ))}
         </ul>
       </div>

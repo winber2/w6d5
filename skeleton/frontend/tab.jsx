@@ -22,15 +22,17 @@ class Tab extends React.Component {
       <div className="tab">
         <header>
           <ul>
-            <li><h1 className="0" onClick={this.handleClick.bind(this)}> zero </h1></li>
-            <li><h1 className="1" onClick={this.handleClick.bind(this)}> one </h1></li>
-            <li><h1 className="2" onClick={this.handleClick.bind(this)}> two </h1></li>
+            <li><h1 className="0" onClick={this.handleClick.bind(this)}> 1 </h1></li>
+            <li><h1 className="1" onClick={this.handleClick.bind(this)}> 2 </h1></li>
+            <li><h1 className="2" onClick={this.handleClick.bind(this)}> 3 </h1></li>
           </ul>
         </header>
 
-        <article>
-          {this.tabs[this.state.idx]}
-        </article>
+        <div>
+          <span>
+            {this.tabs[this.state.idx]}
+          </span>
+        </div>
       </div>
     );
   }

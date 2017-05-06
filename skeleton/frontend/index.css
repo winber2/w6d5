@@ -70,15 +70,16 @@ div.blue li {
   list-style: none;
 }
 
-article {
+.tab div {
+  position: relative;
   margin: -25px auto;
-  width: 250px;
+  width: 247px;
   height: 200px;
   background-color: PaleTurquoise;
   border-radius: 10px;
-  border: 2px solid MediumTurquoise;
+  border: 1px solid MediumTurquoise;
   box-shadow: 0 5px 15px DarkCyan;
-  z-index: 1;
+  z-index: 10;
 }
 
 .tab {
@@ -89,23 +90,29 @@ article {
 
 header {
   display: block;
+  /*z-index: 1;*/
 }
-
 
 .tab ul{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /*z-index: 1*/
 }
 
 .tab li {
+  flex: 1;
   list-style: none;
   border: 2px solid MediumTurquoise;
   border-radius: 20px;
-  padding: 0 11px;
   padding-bottom: 25px;
   background: PaleTurquoise;
   box-shadow: 0 -5px 15px DarkCyan;
+}
 
-  z-index: 2;
+.tab span {
+  display: block;
+  padding-top: 70px;
+  text-align: center;
+  font-size: 30px;
 }
