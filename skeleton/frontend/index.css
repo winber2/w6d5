@@ -1,0 +1,111 @@
+body, div, h1, h2, h3, h4, h5, h6, ul, li {
+  font-family: Quicksand;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.clock ul, .clock li {
+  list-style: none;
+  display: flex;
+}
+
+.clock ul {
+  flex-direction: column;
+}
+
+.clock li {
+  justify-content: space-between;
+}
+
+.clock span, .clock h4 {
+  font-size: 20px;
+  padding: 5px;
+}
+
+
+div.clock {
+  margin: 15px auto;
+  text-align: center;
+  width: 500px;
+  height: 80px;
+  background-color: PaleTurquoise;
+  border: 2px solid MediumTurquoise;
+  border-radius: 10px;
+  box-shadow: 0 0 25px DarkCyan;
+}
+
+div.blue {
+  background-color: pink;
+  box-shadow: 0 0 25px Red;
+  border: 2px solid orange;
+}
+
+div.blue li {
+  justify-content: space-around;
+}
+
+.clock h1 {
+  padding-top: 5px;
+}
+
+.box {
+  margin: 15px auto;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  background-color: PaleTurquoise;
+  border: 2px solid MediumTurquoise;
+  border-radius: 10px;
+  box-shadow: 0 0 25px DarkCyan;
+}
+
+.auto ul li {
+  align-items: flex-start;
+  justify-content: space-around;
+  list-style: none;
+}
+
+article {
+  margin: -25px auto;
+  width: 250px;
+  height: 200px;
+  background-color: PaleTurquoise;
+  border-radius: 10px;
+  border: 2px solid MediumTurquoise;
+  box-shadow: 0 5px 15px DarkCyan;
+  z-index: 1;
+}
+
+.tab {
+  width: 250px;
+  height: 200px;
+  margin: 15px auto;
+}
+
+header {
+  display: block;
+}
+
+
+.tab ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab li {
+  list-style: none;
+  border: 2px solid MediumTurquoise;
+  border-radius: 20px;
+  padding: 0 11px;
+  padding-bottom: 25px;
+  background: PaleTurquoise;
+  box-shadow: 0 -5px 15px DarkCyan;
+
+  z-index: 2;
+}
