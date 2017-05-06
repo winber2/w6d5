@@ -43,7 +43,7 @@ class Weather extends React.Component {
 
   render() {
     return (
-      <div className="clock blue">
+      <div className="clock">
         <ul>
           <li>
             <h4>{this.state.city}</h4>

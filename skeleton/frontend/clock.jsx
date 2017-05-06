@@ -87,7 +87,7 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="root">
         <h1>Clock</h1>
         <div className="clock">
           <ul>
@@ -104,12 +104,12 @@ class Clock extends React.Component {
         <h1>Weather</h1>
         <Weather />
 
+        <h1>Tabs</h1>
         <div className="box">
-          <h1>AutoComplete</h1>
+          <Tab />
           <AutoComplete />
         </div>
 
-        <Tab />
 
       </div>
     );

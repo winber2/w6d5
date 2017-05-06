@@ -28,12 +28,15 @@ class AutoComplete extends React.Component {
   render() {
     return (
       <div className="auto">
-        <input className="input" onInput={this.handleInput.bind(this)}></input>
-        <ul>
-          {this.names.map((name, i) => (
-            <li key={i} onClick={this.handleClick.bind(this)}>{name}</li>
-          ))}
-        </ul>
+        <div>
+          <h3>AutoComplete</h3>
+          <input className="input" onInput={this.handleInput.bind(this)}></input>
+          <ul>
+            {this.names.map((name, i) => (
+              <li key={i} onClick={this.handleClick.bind(this)}>{name}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }

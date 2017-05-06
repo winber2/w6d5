@@ -11,7 +11,7 @@ class Tab extends React.Component {
     e.preventDefault();
     let prevTab = document.getElementsByClassName(`${this.state.idx}`)[0];
     prevTab.classList.remove("selected");
-    let tab = e.currentTarget;
+    let tab = e.currentTarget.parentElement;
     tab.classList.add("selected");
     let index = tab.classList[0];
     this.setState({ idx: index });
@@ -22,9 +22,9 @@ class Tab extends React.Component {
       <div className="tab">
         <header>
           <ul>
-            <li><h1 className="0" onClick={this.handleClick.bind(this)}> 1 </h1></li>
-            <li><h1 className="1" onClick={this.handleClick.bind(this)}> 2 </h1></li>
-            <li><h1 className="2" onClick={this.handleClick.bind(this)}> 3 </h1></li>
+            <li className="0"><h1 onClick={this.handleClick.bind(this)}> 1 </h1></li>
+            <li className="1"><h1 onClick={this.handleClick.bind(this)}> 2 </h1></li>
+            <li className="2"><h1 onClick={this.handleClick.bind(this)}> 3 </h1></li>
           </ul>
         </header>
 

@@ -5,10 +5,14 @@ body, div, h1, h2, h3, h4, h5, h6, ul, li {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
+div.root h1 {
+  background: transparent;
 }
 
+.clock {
+  background: url('http://atextures.com/wp-content/uploads/2014/08/Sky-Clouds-Background-26-625x401.jpg');
+  background-size: cover;
+}
 .clock ul, .clock li {
   list-style: none;
   display: flex;
@@ -24,9 +28,13 @@ h1 {
 
 .clock span, .clock h4 {
   font-size: 20px;
-  padding: 5px;
+  padding: 8px 15px 0 15px;
 }
 
+h3 {
+  padding-top: 8px;
+  font-size: 27px;
+}
 
 div.clock {
   margin: 15px auto;
@@ -39,35 +47,51 @@ div.clock {
   box-shadow: 0 0 25px DarkCyan;
 }
 
-div.blue {
-  background-color: pink;
-  box-shadow: 0 0 25px Red;
-  border: 2px solid orange;
-}
-
-div.blue li {
-  justify-content: space-around;
+div.root {
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .clock h1 {
-  padding-top: 5px;
+  padding-top: 5px
 }
 
 .box {
-  margin: 15px auto;
-  text-align: center;
-  width: 500px;
-  height: 200px;
+  display: flex;
+}
+
+.auto {
+  flex: 1;
+  margin: 13px 0 -13px 20px;
   background-color: PaleTurquoise;
   border: 2px solid MediumTurquoise;
   border-radius: 10px;
   box-shadow: 0 0 25px DarkCyan;
 }
 
-.auto ul li {
+.auto input {
+  margin: 20px 0;
+}
+
+.auto div {
+  width: 175px;
+  margin: 0 auto;
+}
+
+.auto ul {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+}
+
+.auto ul li {
   list-style: none;
+}
+
+.auto li:hover {
+  cursor: pointer;
 }
 
 .tab div {
@@ -83,21 +107,18 @@ div.blue li {
 }
 
 .tab {
-  width: 250px;
-  height: 200px;
+  flex: 1;
   margin: 15px auto;
 }
 
 header {
   display: block;
-  /*z-index: 1;*/
 }
 
 .tab ul{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /*z-index: 1*/
 }
 
 .tab li {
@@ -108,11 +129,23 @@ header {
   padding-bottom: 25px;
   background: PaleTurquoise;
   box-shadow: 0 -5px 15px DarkCyan;
+  cursor: pointer;
 }
 
+.tab li:hover {
+  background: MediumTurquoise;
+}
 .tab span {
   display: block;
   padding-top: 70px;
   text-align: center;
   font-size: 30px;
+}
+
+.tab h1 {
+  text-align: center;
+}
+
+li.selected {
+  background: MediumTurquoise;
 }
